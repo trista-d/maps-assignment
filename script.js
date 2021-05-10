@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+} // if
+
 let map;
 let service;
 let infoWindowLoc; // popup for restaurant info
