@@ -6,10 +6,17 @@
  
     <meta name="description" content="google maps API assignment for wev dev 12">
     
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" type="image/png" href="images/icons/192.png"/>
+    
+    <meta name="description" content="google maps intro for wev dev 12">
+    
+    <meta name="theme-color" content="#0dcaf0"/>
+    <link rel="apple-touch-icon" href="images/192.png">
     
     <title>Maps Assignment</title>
     
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
     <!-- google maps -->
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjdVqHjR6-ZNk2GwLR7-19Jgy8F4tczRk&libraries=places,geometry&callback=initMap" type="text/javascript"></script>
@@ -18,7 +25,7 @@
     
     <!-- bootstrap -->
    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0/dist/css/bootstrap.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0/dist/css/bootstrap.min.css" crossorigin="anonymous" preconnect/>
    
   </head>
   <body>
@@ -32,7 +39,7 @@
       <div class="input-group">
         <input id="search" type="text" class="form-control" value="restaurants" placeholder="try restaurants..." aria-describedby="basic-addon2">
         <span class="input-group-btn">
-          <button class="btn btn-info" id="searchBtn" dtype="button"><i class="bi bi-search"></i></button>
+          <button class="btn btn-info" aria-label="search" id="searchBtn" dtype="button"><i class="bi bi-search"></i></button>
         </span>
       </div>
           <label for="quantity">Number of results:&nbsp;</label>
@@ -40,14 +47,14 @@
         </div>
         
       <div id="route">
-        &times;
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <div id="floating-panel"></div>
       </div>
       
       <div id="map"></div>
       
       <div id="slideContainer">
-          <span id="forSlider">Search Radius</span>
+          <label for="slider" id="forSlider">Search Radius</label>
           <br>
           <output>3 KM</output>
           <input type="range" class="form-control form-range" min="1" max="50" value="3" id="slider" orient="vertical" oninput="this.previousElementSibling.value = this.value + ' KM'">
