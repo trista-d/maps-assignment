@@ -201,15 +201,17 @@ function createMarker(place) {
   
   // create the actual marker
   // https://developers.google.com/maps/documentation/javascript/markers
+  let pin =  { path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+        fillColor: "#FFFF00",
+        fillOpacity: 1,
+        strokeColor: '#000',
+        strokeWeight: 2,
+        scale: 1};
+  
   const marker = new google.maps.Marker({
     map,
     position: place.geometry.location,
-       icon: {
-      url: "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
-      scaledSize: new google.maps.Size(40, 40),
-      origin: new google.maps.Point(0,0,), // origin
-      anchor: new google.maps.Point(0,0,) // anchor
-       },
+    icon: pin,
     title: place.name
   });
   
