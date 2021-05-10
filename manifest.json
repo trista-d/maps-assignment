@@ -1,0 +1,36 @@
+{
+"theme_color" : "#0dcaf0",
+"background_color" : "#0dcaf0",
+"display" : "standalone",
+"scope" : "/",
+"start_url" : "/",
+"name" : "Find a Location - Google Maps Assignment",
+"short_name" : "Find A Location",
+"description" : "Find the highest rated locations near you",
+"icons": [
+    {
+      "src": "images/icons/192.png",
+      "sizes": "192x192",
+	  "purpose": "any"
+    },
+    {
+      "src": "images/icons/512.png",
+      "sizes": "512x512",
+	  "purpose": "maskable"
+    },
+  
+  {
+      "src": "images/icons/256.png",
+      "sizes": "256x256",
+	  "purpose": "maskable"
+    },
+  
+  {
+      "src": "images/icons/384.png",
+      "sizes": "384x384", 
+	  "purpose": "maskable"
+    }
+ 
+  ]
+
+}
