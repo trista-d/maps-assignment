@@ -1,0 +1,217 @@
+body {
+  font-family: Tahoma, arial, sans-serif !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#cont {
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#route {
+  width: 100%;
+  position: absolute;
+  display: none;
+  max-height: 80%;
+}
+
+#floating-panel {
+  z-index: 1000002; /* 1 larger than the z-index of Google's text in the bottom right corner of map*/
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 100%;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.td {
+  background-color: #eee;
+}
+
+.gm-style-iw {
+   z-index: 20 !important;
+}
+
+#close {
+  position: relative;
+  float: right;
+  margin-top: 2%;
+}
+
+#close:hover {
+  cursor: pointer;
+}
+
+#searchContainer {
+  z-index: 1000002;
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 1%;
+  width: 50%;
+  text-align: center;
+}
+
+input, #searchBtn {
+  text-align: center;
+}
+
+#search, #searchBtn, #quantity, label {
+  font-size: 3vh;
+}
+
+@media screen and (max-width: 775px) {
+  #searchContainer {
+    top: 8%;
+  }
+}
+
+#alert {
+  padding: 2%;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  font-size: 2vh;
+  display: none;
+  margin-bottom: 0.5%;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 3vh;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+#slider {
+  position: absolute;
+  transform: rotate(-90deg) scale(1.5);
+  width: 300%;
+  left: -80%;
+  margin-top: 30%;
+  background-color: rgba(0,0,0,0);
+  border: none !important;
+}
+
+output, #forSlider {
+  position: relative;
+  top: -250%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: #c2e9f0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: #0dcaf0;
+}
+
+#slideContainer {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translate(0, -50%);
+  height: 10%;
+}
+
+#slider:focus{
+    box-shadow: none !important;
+}
+
+.gm-style-iw-c {
+   z-index: 9999999;
+}
+
+output {
+  position: relative;
+  float: left;
+  padding-left: 0%;
+  font-size: 2.5vh;
+  left: 0%;
+  font-weight: bold;
+}
+
+#quantity {
+  width: 15%;
+}
+
+#btnContain {
+  position: relative;
+  width: 60%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search {
+ width: 80%;
+}
+
+span {
+  font-size: 2vh;
+}
+
+.address {
+  font-size: 2vh;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  #searchContainer {
+   width: 80%;
+  }
+  
+  #quantity {
+    width: 20%;
+  }
+  
+  #slideContainer {
+    top: 60%;
+  }
+  
+  #route {
+    top: 25%;
+    height: 80%;
+  }
+  
+  #floating-panel {
+    width: 20%;
+  }
+}
