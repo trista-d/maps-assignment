@@ -1,4 +1,7 @@
 # Google Maps Assignment
+
+![project screenshot](googlemaps_cover.png)
+
 ### Web dev 12 API project
 - search Google maps using custom queries, search radius, and number of results
 - See directions to a location with choice of travel mode
